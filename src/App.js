@@ -20,7 +20,7 @@ const App = () => {
         <button onClick={handlePower}>{power ? "OFF" : "ON"}</button>
       </div>
 
-      {power ? <Menu /> : null}
+      <Menu isOn={power} />
 
       <footer>
         <h4>Copyright &#169; 2020</h4>

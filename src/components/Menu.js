@@ -1,7 +1,7 @@
 import React from "react";
 
 const Menu = (props) => {
-  return (
+  return props.isOn ? (
     <section>
       <hr />
       <div className="mode">
@@ -16,7 +16,7 @@ const Menu = (props) => {
         <button>Intensity</button>
       </div>
     </section>
-  );
+  ) : null;
 };
 
 export default Menu;
