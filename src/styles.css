@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+header {
+  background: cyan;
+  color: #d6c8c8;
+}
+
+footer {
+  background: darkblue;
+  color: rgb(218, 200, 200);
+}
