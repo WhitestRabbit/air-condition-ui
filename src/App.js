@@ -5,9 +5,24 @@ import Menu from "./components/Menu";
 
 const App = () => {
   const [power, setPower] = useState(false);
+  const [modeCounter, setModeCounter] = useState(0);
+  const [intensityCounter, setIntensityCounter] = useState(0);
+  const [temperature, setTemperature] = useState(23);
 
   const handlePower = () => {
     setPower(!power);
+  };
+
+  const handleCounter = (e) => {
+    e.target.name === "mode"
+      ? setModeCounter((modeCounter + 1) % 4)
+      : setIntensityCounter((intensityCounter + 1) % 4);
+  };
+
+  const handleTemperature = (e) => {
+    e.target.name === "plus"
+      ? setTemperature(temperature + 1)
+      : setTemperature(temperature - 1);
   };
 
   return (
@@ -20,7 +35,14 @@ const App = () => {
         <button onClick={handlePower}>{power ? "OFF" : "ON"}</button>
       </div>
 
-      <Menu isOn={power} />
+      <Menu
+        isOn={power}
+        mode={modeCounter}
+        intensity={intensityCounter}
+        temperature={temperature}
+        counterHandler={handleCounter}
+        temperatureHandler={handleTemperature}
+      />
 
       <footer>
         <h4>Copyright &#169; 2020</h4>

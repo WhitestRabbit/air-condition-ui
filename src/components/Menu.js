@@ -1,19 +1,34 @@
 import React from "react";
+import { modes, intensity } from "../data";
 
 const Menu = (props) => {
   return props.isOn ? (
     <section>
       <hr />
-      <div className="mode">
-        <button>Mode</button>
-      </div>
-
       <div className="temperature">
-        <button>Temperature</button>
+        <p>Temperature</p>
+        <div>{props.temperature}</div>
+        <br />
+        <button name="plus" onClick={props.temperatureHandler}>
+          +
+        </button>{" "}
+        <button name="minus" onClick={props.temperatureHandler}>
+          -
+        </button>
+      </div>
+      <br />
+      <div className="mode">
+        <button name="mode" onClick={props.counterHandler}>
+          Mode
+        </button>
+        <p>{modes[props.mode]}</p>
       </div>
 
       <div className="intensity">
-        <button>Intensity</button>
+        <button name="intensity" onClick={props.counterHandler}>
+          Intensity
+        </button>
+        <p>{intensity[props.intensity]}</p>
       </div>
     </section>
   ) : null;
