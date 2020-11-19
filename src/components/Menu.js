@@ -9,10 +9,10 @@ const Menu = (props) => {
         <p>Temperature</p>
         <div>{props.temperature}</div>
         <br />
-        <button name="plus" onClick={props.temperatureHandler}>
+        <button name="+1" onClick={props.temperatureHandler}>
           +
         </button>{" "}
-        <button name="minus" onClick={props.temperatureHandler}>
+        <button name="-1" onClick={props.temperatureHandler}>
           -
         </button>
       </div>

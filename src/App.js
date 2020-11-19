@@ -20,9 +20,7 @@ const App = () => {
   };
 
   const handleTemperature = (e) => {
-    e.target.name === "plus"
-      ? setTemperature(temperature + 1)
-      : setTemperature(temperature - 1);
+    setTemperature(temperature + parseInt(e.target.name, 10));
   };
 
   return (
