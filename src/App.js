@@ -22,10 +22,11 @@ const App = () => {
 
   const handleTemperature = (e) => {
     if (
-      (temperature === 30 && e.target.name === "+1") ||
-      (temperature === 15 && e.target.name === "-1")
+      !(
+        (temperature === 30 && e.target.name === "+1") ||
+        (temperature === 15 && e.target.name === "-1")
+      )
     ) {
-    } else {
       setTemperature(temperature + parseInt(e.target.name, 10));
     }
   };
