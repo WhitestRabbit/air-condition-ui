@@ -18,14 +18,18 @@ const Menu = (props) => {
       </div>
       <br />
       <div className="mode">
-        <button name="mode" onClick={props.counterHandler}>
+        <button name="mode" value={props.mode} onClick={props.counterHandler}>
           Mode
         </button>
         <p>{modes[props.mode]}</p>
       </div>
 
       <div className="intensity">
-        <button name="intensity" onClick={props.counterHandler}>
+        <button
+          name="intensity"
+          value={props.intensity}
+          onClick={props.counterHandler}
+        >
           Intensity
         </button>
         <p>{intensity[props.intensity]}</p>
