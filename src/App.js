@@ -8,6 +8,7 @@ const App = () => {
   const [modeCounter, setModeCounter] = useState(0);
   const [intensityCounter, setIntensityCounter] = useState(0);
   const [temperature, setTemperature] = useState(23);
+  const [swing, setSwing] = useState(false);
 
   const handlePower = () => {
     setPower(!power);
@@ -20,7 +21,17 @@ const App = () => {
   };
 
   const handleTemperature = (e) => {
-    setTemperature(temperature + parseInt(e.target.name, 10));
+    if (
+      (temperature === 30 && e.target.name === "+1") ||
+      (temperature === 15 && e.target.name === "-1")
+    ) {
+    } else {
+      setTemperature(temperature + parseInt(e.target.name, 10));
+    }
+  };
+
+  const handleSwing = () => {
+    setSwing(!swing);
   };
 
   return (
@@ -38,8 +49,10 @@ const App = () => {
         mode={modeCounter}
         intensity={intensityCounter}
         temperature={temperature}
+        swing={swing}
         counterHandler={handleCounter}
         temperatureHandler={handleTemperature}
+        swingHandler={handleSwing}
       />
 
       <footer>

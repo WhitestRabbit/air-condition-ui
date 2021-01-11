@@ -3,12 +3,11 @@ import { modes, intensity } from "../data";
 
 const Menu = (props) => {
   return props.isOn ? (
-    <section>
-      <hr />
-      <div className="temperature">
+    <section className="container">
+      {/* <hr /> */}
+      <div className="temperature box">
         <p>Temperature</p>
-        <div>{props.temperature}</div>
-        <br />
+        <div className="field">{props.temperature}</div>
         <button name="+1" onClick={props.temperatureHandler}>
           +
         </button>{" "}
@@ -16,23 +15,28 @@ const Menu = (props) => {
           -
         </button>
       </div>
-      <br />
-      <div className="mode">
+      <div className="mode box">
+        <p>Mode</p>
+        <p className="field">{modes[props.mode]}</p>
         <button name="mode" value={props.mode} onClick={props.counterHandler}>
-          Mode
+          Cycle
         </button>
-        <p>{modes[props.mode]}</p>
       </div>
-
-      <div className="intensity">
+      <div className="intensity box">
+        <p>Intensity</p>
+        <p className="field">{intensity[props.intensity]}</p>
         <button
           name="intensity"
           value={props.intensity}
           onClick={props.counterHandler}
         >
-          Intensity
+          Cycle
         </button>
-        <p>{intensity[props.intensity]}</p>
+      </div>
+      <div className="swing box">
+        <p>Swing</p>
+        <p className="field">{props.swing ? "ON" : "OFF"}</p>
+        <button onClick={props.swingHandler}>Switch</button>
       </div>
     </section>
   ) : null;

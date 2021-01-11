@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 header {
   background: cyan;
   color: #575454;
@@ -11,4 +15,29 @@ header {
 footer {
   background: darkblue;
   color: rgb(218, 200, 200);
+}
+
+.container {
+  margin: 20px auto;
+  width: 25rem;
+  height: 20rem;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 12rem 12rem;
+  grid-row: auto auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 1px #333;
+}
+
+.field {
+  margin: auto 20px 20px;
+  border: ridge;
+  border-radius: 10px;
 }
