@@ -41,3 +41,9 @@ footer {
   border: ridge;
   border-radius: 10px;
 }
+
+.powerbtn {
+  width: 5rem;
+  border: groove;
+  border-radius: 5px;
+}

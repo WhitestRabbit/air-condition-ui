@@ -41,7 +41,9 @@ const App = () => {
       </header>
 
       <div className="power">
-        <button onClick={handlePower}>{power ? "OFF" : "ON"}</button>
+        <button className="powerbtn" onClick={handlePower}>
+          <h2>{power ? "OFF" : "ON"}</h2>
+        </button>
       </div>
 
       <Menu
@@ -55,9 +57,9 @@ const App = () => {
         swingHandler={handleSwing}
       />
 
-      <footer>
+      {/* <footer>
         <h4>Copyright &#169; 2020</h4>
-      </footer>
+      </footer> */}
     </div>
   );
 };
