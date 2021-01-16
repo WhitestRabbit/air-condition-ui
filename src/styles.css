@@ -1,10 +1,13 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
 * {
   box-sizing: border-box;
+  --font-primary: "Roboto Slab", serif;
+  --font-secondary: "Comfortaa", cursive;
+}
+
+.App,
+button {
+  font-family: var(--font-primary);
+  text-align: center;
 }
 
 header {
@@ -15,6 +18,12 @@ header {
 footer {
   background: darkblue;
   color: rgb(218, 200, 200);
+}
+
+.powerbtn {
+  width: 5rem;
+  border: groove;
+  border-radius: 5px;
 }
 
 .container {
@@ -30,6 +39,8 @@ footer {
 }
 
 .box {
+  /* font-family: var(--font-secondary); */
+  font-size: 1rem;
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
@@ -37,13 +48,9 @@ footer {
 }
 
 .field {
+  /* font-family: var(--font-secondary); */
+  font-size: 1.2rem;
   margin: auto 20px 20px;
   border: ridge;
   border-radius: 10px;
-}
-
-.powerbtn {
-  width: 5rem;
-  border: groove;
-  border-radius: 5px;
 }
