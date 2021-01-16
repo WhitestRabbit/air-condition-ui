@@ -6,8 +6,8 @@ const Menu = (props) => {
     <section className="container">
       {/* <hr /> */}
       <div className="temperature box">
-        <p>Temperature</p>
-        <div className="field">{props.temperature}</div>
+        <p>Θερμοκρασία</p>
+        <div className="field">{props.temperature}°C</div>
         <button name="+1" onClick={props.temperatureHandler}>
           +
         </button>{" "}
@@ -16,14 +16,14 @@ const Menu = (props) => {
         </button>
       </div>
       <div className="mode box">
-        <p>Mode</p>
+        <p>Λειτουργία</p>
         <p className="field">{modes[props.mode]}</p>
         <button name="mode" value={props.mode} onClick={props.counterHandler}>
           Cycle
         </button>
       </div>
       <div className="intensity box">
-        <p>Intensity</p>
+        <p>Ένταση</p>
         <p className="field">{intensity[props.intensity]}</p>
         <button
           name="intensity"
@@ -34,7 +34,7 @@ const Menu = (props) => {
         </button>
       </div>
       <div className="swing box">
-        <p>Swing</p>
+        <p>Κίνηση Περσίδων</p>
         <p className="field">{props.swing ? "ON" : "OFF"}</p>
         <button onClick={props.swingHandler}>Switch</button>
       </div>

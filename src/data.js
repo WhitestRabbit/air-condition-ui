@@ -1,2 +1,2 @@
-export const modes = ["auto", "dry", "heat", "cool"];
-export const intensity = ["auto", "low", "medium", "turbo"];
+export const modes = ["Αυτόματο", "Αφύγρανση", "Θέρμανση", "Ψύξη"];
+export const intensity = ["Αυτόματη", "Χαμηλή", "Μεσαία", "Υψηλή"];
