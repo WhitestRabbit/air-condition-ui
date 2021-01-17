@@ -27,7 +27,17 @@ footer {
 }
 
 .help {
-  padding-top: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.help button {
+  margin: 20px;
+  padding: 5px;
+  width: 6.5rem;
+  border: groove;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .temperature {
@@ -51,7 +61,7 @@ footer {
 }
 
 .container {
-  margin: 20px auto;
+  margin: 20px auto 0px auto;
   width: 25rem;
   background-color: #fff;
   display: grid;

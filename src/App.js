@@ -9,6 +9,8 @@ const App = () => {
   const [intensityCounter, setIntensityCounter] = useState(0);
   const [temperature, setTemperature] = useState(23);
   const [swing, setSwing] = useState(false);
+  const [timer, setTimer] = useState(0);
+  const [timerAction, setTimerAction] = useState(false);
 
   const handlePower = () => {
     setPower(!power);
@@ -35,6 +37,10 @@ const App = () => {
     setSwing(!swing);
   };
 
+  const handleTimerAction = () => {
+    setTimerAction(!timerAction);
+  };
+
   return (
     <div className="App">
       <header>
@@ -53,13 +59,16 @@ const App = () => {
         intensity={intensityCounter}
         temperature={temperature}
         swing={swing}
+        timer={timer}
+        timerOn={timerAction}
         counterHandler={handleCounter}
         temperatureHandler={handleTemperature}
         swingHandler={handleSwing}
+        timerHandler={handleTimerAction}
       />
-      
+
       <div className="help">
-        <button>ΒΟΗΘΕΙΑ</button>
+        <button >ΒΟΗΘΕΙΑ</button>
       </div>
     </div>
   );

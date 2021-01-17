@@ -40,7 +40,7 @@ const Menu = (props) => {
       <div className="timer box">
         <p>ΧΡΟΝΟΜΕΤΡΟ</p>
         <p className="field">10:00</p>
-        <button>Εκκίνηση</button>
+        <button onClick={props.timerHandler}>{props.timerOn ? "Παύση" : "Εκκίνηση"}</button>
         <br/>
         <button name="+10">
           +
