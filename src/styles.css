@@ -32,6 +32,7 @@ footer {
 }
 
 .help button {
+  background: yellow;
   margin: 20px;
   padding: 5px;
   width: 6.5rem;
