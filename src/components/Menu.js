@@ -4,9 +4,8 @@ import { modes, intensity } from "../data";
 const Menu = (props) => {
   return props.isOn ? (
     <section className="container">
-      {/* <hr /> */}
       <div className="temperature box">
-        <p>Θερμοκρασία</p>
+        <p>ΘΕΡΜΟΚΡΑΣΙΑ</p>
         <div className="field">{props.temperature}°C</div>
         <button name="+1" onClick={props.temperatureHandler}>
           +
@@ -16,27 +15,39 @@ const Menu = (props) => {
         </button>
       </div>
       <div className="mode box">
-        <p>Λειτουργία</p>
+        <p>ΛΕΙΤΟΥΡΓΙΑ</p>
         <p className="field">{modes[props.mode]}</p>
         <button name="mode" value={props.mode} onClick={props.counterHandler}>
-          Cycle
+          Αλλαγή
         </button>
       </div>
       <div className="intensity box">
-        <p>Ένταση</p>
+        <p>ΕΝΤΑΣΗ</p>
         <p className="field">{intensity[props.intensity]}</p>
         <button
           name="intensity"
           value={props.intensity}
           onClick={props.counterHandler}
         >
-          Cycle
+          Αλλαγή
         </button>
       </div>
       <div className="swing box">
-        <p>Κίνηση Περσίδων</p>
+        <p>ΚΙΝΗΣΗ ΠΕΡΣΙΔΩΝ</p>
         <p className="field">{props.swing ? "ON" : "OFF"}</p>
-        <button onClick={props.swingHandler}>Switch</button>
+        <button onClick={props.swingHandler}>Αλλαγή</button>
+      </div>
+      <div className="timer box">
+        <p>ΧΡΟΝΟΜΕΤΡΟ</p>
+        <p className="field">10:00</p>
+        <button>Εκκίνηση</button>
+        <br/>
+        <button name="+10">
+          +
+        </button>{" "}
+        <button name="-10" >
+          -
+        </button>
       </div>
     </section>
   ) : null;

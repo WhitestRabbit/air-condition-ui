@@ -57,10 +57,10 @@ const App = () => {
         temperatureHandler={handleTemperature}
         swingHandler={handleSwing}
       />
-
-      {/* <footer>
-        <h4>Copyright &#169; 2020</h4>
-      </footer> */}
+      
+      <div className="help">
+        <button>ΒΟΗΘΕΙΑ</button>
+      </div>
     </div>
   );
 };

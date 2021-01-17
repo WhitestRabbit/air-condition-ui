@@ -26,12 +26,39 @@ footer {
   border-radius: 5px;
 }
 
+.help {
+  padding-top: 20px;
+}
+
+.temperature {
+  grid-area: temperature;
+}
+
+.mode {
+  grid-area: mode;
+}
+
+.intensity {
+  grid-area: intensity;
+}
+
+.swing {
+  grid-area: swing;
+}
+
+.timer {
+  grid-area: timer;
+}
+
 .container {
   margin: 20px auto;
   width: 25rem;
-  height: 20rem;
   background-color: #fff;
   display: grid;
+  grid-template-areas: 
+  "temperature temperature"
+  "mode intensity"
+  "swing timer";
   grid-template-columns: 12rem 12rem;
   grid-row: auto auto;
   grid-column-gap: 1rem;
@@ -47,10 +74,33 @@ footer {
   border: solid 1px #333;
 }
 
+.box button {
+  box-sizing: border-box;
+  appearance: none;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: groove 2px;
+  background: cyan;
+}
+
 .field {
   /* font-family: var(--font-secondary); */
   font-size: 1.2rem;
   margin: auto 20px 20px;
   border: ridge;
   border-radius: 10px;
+}
+
+.temperature .field {
+  font-size: 2rem;
+  margin: 10px 100px;
+}
+
+.temperature button {
+  font-size: 1.5rem;
+  padding: 5px 12px;
 }
