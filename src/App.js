@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPowerOff, faHandsHelping } from '@fortawesome/free-solid-svg-icons'
 import "./styles.css";
 
 import Menu from "./components/Menu";
@@ -16,10 +18,12 @@ const App = () => {
     setPower(!power);
   };
 
-  const handleCounter = (e) => {
-    e.target.name === "mode"
-      ? setModeCounter((modeCounter + 1) % 4)
-      : setIntensityCounter((intensityCounter + 1) % 4);
+  const handleMode = (e) => {
+    setModeCounter((modeCounter + 1) % 4);
+  };
+
+  const handleIntensity = (e) => {
+    setIntensityCounter((intensityCounter + 1) % 4);
   };
 
   const handleTemperature = (e) => {
@@ -49,7 +53,8 @@ const App = () => {
 
       <div className="power">
         <button className="powerbtn" onClick={handlePower}>
-          <h2>{power ? "OFF" : "ON"}</h2>
+          
+          <h2>{power ? <FontAwesomeIcon icon={faPowerOff} size="2x" color="red"/> : <FontAwesomeIcon icon={faPowerOff} size="2x" color="green"/>}</h2>
         </button>
       </div>
 
@@ -61,14 +66,15 @@ const App = () => {
         swing={swing}
         timer={timer}
         timerOn={timerAction}
-        counterHandler={handleCounter}
+        modeHandler={handleMode}
+        intensityHandler={handleIntensity}
         temperatureHandler={handleTemperature}
         swingHandler={handleSwing}
         timerHandler={handleTimerAction}
       />
 
       <div className="help">
-        <button >ΒΟΗΘΕΙΑ</button>
+        <button ><FontAwesomeIcon icon={faHandsHelping} size="2x"/>ΒΟΗΘΕΙΑ</button>
       </div>
     </div>
   );
