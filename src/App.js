@@ -18,11 +18,11 @@ const App = () => {
     setPower(!power);
   };
 
-  const handleMode = (e) => {
+  const handleMode = () => {
     setModeCounter((modeCounter + 1) % 4);
   };
 
-  const handleIntensity = (e) => {
+  const handleIntensity = () => {
     setIntensityCounter((intensityCounter + 1) % 4);
   };
 
