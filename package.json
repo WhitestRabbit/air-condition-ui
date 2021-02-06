@@ -7,6 +7,10 @@
     "starter"
   ],
   "main": "src/index.js",
+  "engines": {
+    "npm": "6.14.5",
+    "node": "12.18.2"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
