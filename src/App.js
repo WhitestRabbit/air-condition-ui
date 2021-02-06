@@ -11,7 +11,7 @@ const App = () => {
   const [intensityCounter, setIntensityCounter] = useState(0);
   const [temperature, setTemperature] = useState(23);
   const [swing, setSwing] = useState(false);
-  const [timer, setTimer] = useState(0);
+  const [timer] = useState(0);
   const [timerAction, setTimerAction] = useState(false);
 
   const handlePower = () => {
